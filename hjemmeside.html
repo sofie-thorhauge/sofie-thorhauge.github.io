@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sofie Thorhauge - Gallery</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(238, 236, 230);
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      nav > a {
+        margin: 5rem;
+        font-size: 1.5rem;
+        color: rgb(34, 34, 34);
+      }
+      :root {
+        --max-height: 100vh;
+        --max-width: 100vw;
+      }
+      .firsgangetres {
+        --height-factor: 0.8;
+        --width-factor: 0.6;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .tresgangehalvtreds {
+        --height-factor: 0.6;
+        --width-factor: 0.5;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .halvtredsgangehalvtreds {
+        --height-factor: 0.5;
+        --width-factor: 0.5;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .halvtredsgangefyrre {
+        --height-factor: 0.5;
+        --width-factor: 0.4;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .fyrregangehalvtreds {
+        --height-factor: 0.4;
+        --width-factor: 0.5;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+
+      .fyrregangetredive {
+        --height-factor: 0.4;
+        --width-factor: 0.3;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .tyvegangetyve {
+        --height-factor: 0.2;
+        --width-factor: 0.2;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .tresgangefirs {
+        --height-factor: 0.6;
+        --width-factor: 0.8;
+        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      a:hover {
+        color: rgb(122, 122, 122);
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        margin: 4rem;
+      }
+    </style>
+    <nav>
+      <a href="./galleri.html">Galleri</a>
+      <a href="./kontakt.html">Kontakt</a>
+    </nav>
+    <main>
+      <a href="./billede1.html">
+        <img src="./assets/woodrat.jpg" class="halvtredsgangefyrre" />
+      </a>
+
+      <img src="./assets/lake britton.jpg" class="fyrregangehalvtreds" />
+      <img
+        src="./assets/somewhere in jutland.jpg"
+        class="halvtredsgangehalvtreds"
+      />
+      <img src="./assets/kalø.jpg" class="fyrregangetredive" />
+
+      <img src="./assets/dimensioner.jpg" class="firsgangetres" />
+      <img src="./assets/lighthouse 2.jpg" class="tresgangehalvtreds" />
+      <img
+        src="./assets/river bed.jpg"
+        alt="River Bed, 80x60cm"
+        class="firsgangetres"
+      />
+
+      <!-- <img
+        src="../Photos/IMG_20200421_203504.jpg"
+        class="fyrregangehalvtreds"
+      />
+      <img
+        src="../Photos/IMG_20200630_115257.jpg"
+        class="halvtredsgangehalvtreds"
+      />
+      <img
+        src="../Photos/IMG_20200421_203504.jpg"
+        class="fyrregangehalvtreds"
+      />
+      <img
+        src="../Photos/IMG_20200630_115257.jpg"
+        class="halvtredsgangehalvtreds"
+      /> -->
+    </main>
+  </body>
+</html>
