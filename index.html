@@ -8,6 +8,10 @@
   </head>
   <body>
     <style>
+      :root {
+        --max-height: 100vh;
+        --max-width: 100vh;
+      }
       body {
         background-color: rgb(238, 236, 230);
         margin-left: 2rem;
@@ -18,72 +22,76 @@
         justify-content: center;
         width: 100%;
       }
-      nav > a {
+      a {
         margin: 5rem;
         font-size: 1.5rem;
         color: rgb(34, 34, 34);
       }
-      :root {
-        --max-height: 100vh;
-        --max-width: 100vw;
-      }
       .firsgangetres {
+        aspect-ratio: 6 / 8;
         --height-factor: 0.8;
         --width-factor: 0.6;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
       .tresgangehalvtreds {
+        aspect-ratio: 5 / 6;
         --height-factor: 0.6;
         --width-factor: 0.5;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
+        max-height: calc(var(--max-height) * var(--height-factor));
+        max-width: calc(var(--max-width) * var(--width-factor));
+      }
+      .tresgangetres {
+        aspect-ratio: 6 / 6;
+        --height-factor: 0.6;
+        --width-factor: 0.6;
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
       .halvtredsgangehalvtreds {
+        aspect-ratio: 1 / 1;
         --height-factor: 0.5;
         --width-factor: 0.5;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
       .halvtredsgangefyrre {
+        aspect-ratio: 4 / 5;
         --height-factor: 0.5;
         --width-factor: 0.4;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
       .fyrregangehalvtreds {
+        aspect-ratio: 5 / 4;
         --height-factor: 0.4;
         --width-factor: 0.5;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
 
       .fyrregangetredive {
+        aspect-ratio: 3 / 4;
         --height-factor: 0.4;
         --width-factor: 0.3;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
       .tyvegangetyve {
+        aspect-ratio: 1 / 1;
         --height-factor: 0.2;
         --width-factor: 0.2;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
       .tresgangefirs {
+        aspect-ratio: 8 / 6;
         --height-factor: 0.6;
         --width-factor: 0.8;
-        aspect-ratio: var(--width-factor) / var(--height-factor);
         max-height: calc(var(--max-height) * var(--height-factor));
         max-width: calc(var(--max-width) * var(--width-factor));
       }
+
       a:hover {
         color: rgb(122, 122, 122);
       }
@@ -100,42 +108,97 @@
       <a href="./index.html">Gallery</a>
       <a href="./contact.html">Contact</a>
     </nav>
-    <main>
-      <a href="./billede1.html">
-        <img src="./assets/woodrat.jpg" class="halvtredsgangefyrre" />
-      </a>
-
-      <img src="./assets/lake britton.jpg" class="fyrregangehalvtreds" />
-      <img
-        src="./assets/somewhere in jutland.jpg"
-        class="halvtredsgangehalvtreds"
-      />
-      <img src="./assets/kalø.jpg" class="fyrregangetredive" />
-
-      <img src="./assets/dimensioner.jpg" class="firsgangetres" />
-      <img src="./assets/lighthouse 2.jpg" class="tresgangehalvtreds" />
-      <img
-        src="./assets/river bed.jpg"
-        alt="River Bed, 80x60cm"
-        class="firsgangetres"
-      />
-
-      <!-- <img
-        src="../Photos/IMG_20200421_203504.jpg"
-        class="fyrregangehalvtreds"
-      />
-      <img
-        src="../Photos/IMG_20200630_115257.jpg"
-        class="halvtredsgangehalvtreds"
-      />
-      <img
-        src="../Photos/IMG_20200421_203504.jpg"
-        class="fyrregangehalvtreds"
-      />
-      <img
-        src="../Photos/IMG_20200630_115257.jpg"
-        class="halvtredsgangehalvtreds"
-      /> -->
+    <main id="photos">
+      <!-- Created from JS -->
     </main>
   </body>
+  <script>
+    const sources = [
+      {
+        path: "./Photos/woodrat.jpg",
+        class: "halvtredsgangefyrre",
+      },
+      {
+        path: "./Photos/lake britton.jpg",
+        class: "fyrregangehalvtreds",
+      },
+      {
+        path: "./Photos/somewhere in jutland.jpg",
+        class: "halvtredsgangehalvtreds",
+      },
+
+      {
+        path: "./Photos/river bank.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/præstesletten.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/saint vincent les forts.jpg",
+        class: "halvtredsgangehalvtreds",
+      },
+      {
+        path: "./Photos/vigsø.jpg",
+        class: "tresgangefirs",
+      },
+      {
+        path: "./Photos/dimensions.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/color sudoku.jpg",
+        class: "tresgangetres",
+      },
+      {
+        path: "./Photos/color sudoku blank.jpg",
+        class: "tresgangetres",
+      },
+      {
+        path: "./Photos/color sudoku complete.jpg",
+        class: "tresgangetres",
+      },
+      {
+        path: "./Photos/beach 1.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/lighthouse.jpg",
+        class: "halvtredsgangefyrre",
+      },
+      {
+        path: "./Photos/beach house cutout.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/beach 2.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/beach house.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/airport mast.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/orange red stripes.jpg",
+        class: "fyrregangetredive",
+      },
+      {
+        path: "./Photos/truck logo.jpg",
+        class: "fyrregangetredive",
+      },
+    ];
+    const photosNode = document.getElementById("photos");
+
+    for (const source of sources) {
+      const sourceNode = document.createElement("img");
+      sourceNode.src = source.path;
+      sourceNode.classList.add(source.class);
+      photosNode.appendChild(sourceNode);
+    }
+  </script>
 </html>
