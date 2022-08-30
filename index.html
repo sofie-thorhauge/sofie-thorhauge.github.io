@@ -101,7 +101,7 @@
         align-items: center;
       }
       img {
-        margin: 4rem;
+        margin-top: 8rem;
       }
     </style>
     <nav>
@@ -115,21 +115,54 @@
   <script>
     const sources = [
       {
-        path: "./Photos/woodrat.jpg",
-        class: "halvtredsgangefyrre",
+        path: "./Photos/kalv på fælleden.jpg",
+        class: "fyrregangetredive",
+        text: "Kalv på fælleden, 40x30cm, 2022",
       },
       {
-        path: "./Photos/lake britton.jpg",
-        class: "fyrregangehalvtreds",
+        path: "./Photos/blåstribet badehus på strand.jpg",
+        class: "tresgangetres",
       },
       {
-        path: "./Photos/somewhere in jutland.jpg",
-        class: "halvtredsgangehalvtreds",
+        path: "./Photos/vejskilt og senegræs.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/vejskilt og hvede.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/blåstribet badehus med gul baggrund.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/blåstribet fyrtårn udsnit.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/beach house cutout.jpg",
+        class: "firsgangetres",
       },
 
       {
         path: "./Photos/river bank.jpg",
         class: "firsgangetres",
+      },
+      {
+        path: "./Photos/beach house.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/airport mast.jpg",
+        class: "firsgangetres",
+      },
+      {
+        path: "./Photos/orange red stripes.jpg",
+        class: "fyrregangetredive",
+      },
+      {
+        path: "./Photos/truck logo.jpg",
+        class: "fyrregangetredive",
       },
       {
         path: "./Photos/præstesletten.jpg",
@@ -142,6 +175,18 @@
       {
         path: "./Photos/vigsø.jpg",
         class: "tresgangefirs",
+      },
+      {
+        path: "./Photos/woodrat.jpg",
+        class: "halvtredsgangefyrre",
+      },
+      {
+        path: "./Photos/lake britton.jpg",
+        class: "fyrregangehalvtreds",
+      },
+      {
+        path: "./Photos/somewhere in jutland.jpg",
+        class: "halvtredsgangehalvtreds",
       },
       {
         path: "./Photos/dimensions.jpg",
@@ -167,29 +212,10 @@
         path: "./Photos/lighthouse.jpg",
         class: "halvtredsgangefyrre",
       },
-      {
-        path: "./Photos/beach house cutout.jpg",
-        class: "firsgangetres",
-      },
+
       {
         path: "./Photos/beach 2.jpg",
         class: "firsgangetres",
-      },
-      {
-        path: "./Photos/beach house.jpg",
-        class: "firsgangetres",
-      },
-      {
-        path: "./Photos/airport mast.jpg",
-        class: "firsgangetres",
-      },
-      {
-        path: "./Photos/orange red stripes.jpg",
-        class: "fyrregangetredive",
-      },
-      {
-        path: "./Photos/truck logo.jpg",
-        class: "fyrregangetredive",
       },
     ];
     const photosNode = document.getElementById("photos");
@@ -199,6 +225,10 @@
       sourceNode.src = source.path;
       sourceNode.classList.add(source.class);
       photosNode.appendChild(sourceNode);
+
+      const textNode = document.createElement("p");
+      textNode.innerText = source.text;
+      photosNode.appendChild(textNode);
     }
   </script>
 </html>
