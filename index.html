@@ -25,7 +25,9 @@
       a {
         margin: 5rem;
         font-size: 1.5rem;
-        color: rgb(34, 34, 34);
+        color: rgb(51, 51, 51);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       }
       .firsgangetres {
         aspect-ratio: 6 / 8;
@@ -103,6 +105,12 @@
       img {
         margin-top: 8rem;
       }
+      .aa {
+        font-size: 0.8rem;
+        color: rgb(51, 51, 51);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
     </style>
     <nav>
       <a href="./index.html">Gallery</a>
@@ -115,107 +123,131 @@
   <script>
     const sources = [
       {
+        path: "./Photos/blåstribet badehus på strand.jpg",
+        class: "tresgangetres",
+        text: "Blåstribet badehus på strand, 80x60cm, 2022",
+      },
+      {
         path: "./Photos/kalv på fælleden.jpg",
         class: "fyrregangetredive",
         text: "Kalv på fælleden, 40x30cm, 2022",
       },
       {
-        path: "./Photos/blåstribet badehus på strand.jpg",
-        class: "tresgangetres",
-      },
-      {
         path: "./Photos/vejskilt og senegræs.jpg",
         class: "firsgangetres",
+        text: "Vejskilt og senegræs, 80x60cm, 2022",
       },
       {
         path: "./Photos/vejskilt og hvede.jpg",
         class: "firsgangetres",
+        text: "Vejskilt og hvede, 80x60cm, 2022",
       },
       {
         path: "./Photos/blåstribet badehus med gul baggrund.jpg",
         class: "firsgangetres",
+        text: "Blåstribet badehus med gul baggrund",
       },
       {
         path: "./Photos/blåstribet fyrtårn udsnit.jpg",
         class: "firsgangetres",
+        text: "Blåstribet fyrtårn, udsnit, 80x60cm, 2022",
       },
       {
         path: "./Photos/beach house cutout.jpg",
         class: "firsgangetres",
+        text: "Badehus, udsnit, 80x60cm, 2022",
       },
 
       {
         path: "./Photos/river bank.jpg",
         class: "firsgangetres",
+        text: "Flodbred, 80x60cm, 2022",
       },
       {
         path: "./Photos/beach house.jpg",
         class: "firsgangetres",
+        text: "Badehus, 80x60cm, 2013",
       },
       {
         path: "./Photos/airport mast.jpg",
         class: "firsgangetres",
+        text: "Lufthavnsmast, 80x60cm, 2022",
       },
       {
         path: "./Photos/orange red stripes.jpg",
         class: "fyrregangetredive",
+        text: "Orange og røde striber, 40x30cm, 2022",
       },
       {
         path: "./Photos/truck logo.jpg",
         class: "fyrregangetredive",
+        text: "Truck logo, 40x30cm, 2022",
       },
       {
         path: "./Photos/præstesletten.jpg",
         class: "firsgangetres",
+        text: "Præstesletten, 80x60cm, 2022",
       },
       {
         path: "./Photos/saint vincent les forts.jpg",
         class: "halvtredsgangehalvtreds",
+        text: "Saint Vincent-les-Forts, 50x50cm, 2020",
       },
       {
         path: "./Photos/vigsø.jpg",
         class: "tresgangefirs",
+        text: "Vigsø, 60x80cm, 2020",
       },
       {
         path: "./Photos/woodrat.jpg",
         class: "halvtredsgangefyrre",
+        text: "Woodrat, 50x40cm, 2020",
       },
       {
         path: "./Photos/lake britton.jpg",
         class: "fyrregangehalvtreds",
+        text: "Lake Britton, 40x50cm, 2020",
       },
       {
         path: "./Photos/somewhere in jutland.jpg",
         class: "halvtredsgangehalvtreds",
+        text: "Et sted i Jylland, 50x50cm, 2020",
       },
       {
         path: "./Photos/dimensions.jpg",
         class: "firsgangetres",
+        text: "Dimensioner, 80x60cm, 2022",
       },
       {
         path: "./Photos/color sudoku.jpg",
         class: "tresgangetres",
+        text: "Farvesudoku, 60x60cm, 2010",
       },
       {
         path: "./Photos/color sudoku blank.jpg",
         class: "tresgangetres",
+        text: "Farvesudoku, blank, 60x60cm, 2010",
       },
       {
         path: "./Photos/color sudoku complete.jpg",
         class: "tresgangetres",
+        text: "Farvesudoku, færdig, 60x60cm, 2010",
       },
       {
         path: "./Photos/beach 1.jpg",
         class: "firsgangetres",
+        text: "Strand, udsnit på rød og gul, 80x60cm, 2017",
       },
       {
         path: "./Photos/lighthouse.jpg",
         class: "halvtredsgangefyrre",
+        text: "Fyrtårn og blå løbere, 50x40cm, 2017",
       },
 
       {
         path: "./Photos/beach 2.jpg",
         class: "firsgangetres",
+        text: "Strand, udsnit på rød, hvid, gul og sort, 80x60cm, 2022",
       },
     ];
     const photosNode = document.getElementById("photos");
@@ -228,6 +260,7 @@
 
       const textNode = document.createElement("p");
       textNode.innerText = source.text;
+      textNode.classList.add("aa");
       photosNode.appendChild(textNode);
     }
   </script>
